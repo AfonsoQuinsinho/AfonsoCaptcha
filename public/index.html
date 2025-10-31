@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Captcha Resolver Afonso</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="sonic_logo.svg" alt="Sonic logo" class="logo" />
+      <h1>Captcha Resolver Afonso</h1>
+    </div>
+    <img src="run.gif" alt="Sonic running gif" class="run-gif" />
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Formulário com reCAPTCHA</h2>
+      <p>Este formulário mostra o reCAPTCHA do Google (v2). Preenche e clica em "Enviar".</p>
+
+      <form id="demo-form" action="/submit" method="POST">
+        <label for="nome">Nome:</label>
+        <input id="nome" name="nome" required />
+
+        <div class="g-recaptcha" data-sitekey="6LcV3P0rAAAAAOpMWNtjIex0BBIiRRTstBsoYNiK"></div>
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </section>
+
+    <section class="notes card">
+      <h3>Notas técnicas</h3>
+      <ul>
+        <li>Chave Site Key usada (front-end): <code>6LcV3P0rAAAAAOpMWNtjIex0BBIiRRTstBsoYNiK</code></li>
+        <li>2Captcha API Key incluída no ficheiro de configuração (opcional): <code>68a195140aaa1d927da66ca2fc156e56</code></li>
+        <li>O servidor já tem a <strong>Google reCAPTCHA Secret Key</strong> inserida no ficheiro <code>server.js</code>.</li>
+        <li>As imagens do logo / gif estão incluídas localmente no pacote.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Feito para Afonso • Integração 2Captcha & Google reCAPTCHA (demonstração)</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

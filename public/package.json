@@ -1,0 +1,14 @@
+{
+  "name": "captcha-resolver-afonso",
+  "version": "1.0.0",
+  "description": "Demo site showing Google reCAPTCHA v2 and server verification. Secret included in server.js for convenience (remove in production).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.6.7"
+  }
+}
